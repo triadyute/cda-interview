@@ -16,7 +16,7 @@ class CreateHomeContentsTable extends Migration
         Schema::create('home_contents', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('body');
+            $table->longText('body');
             $table->timestamps();
         });
     }

@@ -75,7 +75,7 @@
 					</header>
 
 					<!-- start: page -->
-                    <div class="row">
+                    <div class="row" id="app">
                         <div class="col-md-12">
                             <section class="card">
                                 <header class="card-header">

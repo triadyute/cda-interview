@@ -24,5 +24,5 @@ Route::get('/contact-us', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-//Route::update('/homepage/{home_content}', 'HomeContentController@update')->name('home-contnent.update');
+Route::post('/homepage/{home_content}', 'HomeContentController@update')->name('home-content.update');
 Auth::routes();

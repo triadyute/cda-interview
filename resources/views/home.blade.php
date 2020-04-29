@@ -76,10 +76,12 @@
 
 					<!-- start: page -->
                     <div class="row">
-                        <div class="col">
+                        <div class="col-md-12">
+							@include('inc.messages')
                             <section class="card">
                                 <header class="card-header">
                                     <div class="card-actions">
+										<toggle-no-index-home></toggle-no-index-home>
                                         <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
                                         <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
                                     </div>
@@ -87,17 +89,18 @@
                                     <h2 class="card-title">Edit Homepage Content</h2>
                                 </header>
                                 <div class="card-body">
-                                    <form class="form-horizontal form-bordered" method="POST" enctype="multipart/form-data">
+									<form class="form-horizontal form-bordered" method="POST" action="{{route('home-content.update', $home_content)}}" enctype="multipart/form-data">
+										@csrf
                                         <div class="form-group row">
                                             <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Homepage Title</label>
                                             <div class="col-lg-8">
-                                                <input type="text" class="form-control" id="inputDefault">
+                                                <input type="text" class="form-control" id="inputDefault" name="title" value="{{$home_content->title}}">
                                             </div>
 										</div>
 										<div class="form-group row">
                                             <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Homepage Body</label>
                                             <div class="col-lg-8">
-                                                <textarea class="form-control" id="summary-ckeditor" name="summary-ckeditor"></textarea>
+                                                <textarea class="form-control" id="summary-ckeditor" name="summary-ckeditor" rows="20">{{$home_content->body}}</textarea>
                                             </div>
 										</div>
 										<div class="form-group row">

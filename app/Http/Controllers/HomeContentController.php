@@ -33,9 +33,9 @@ class HomeContentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, HomeContent $home_content)
+    public function store(Request $request)
     {
-        dd($request->all());
+        //
     }
 
     /**
@@ -67,9 +67,14 @@ class HomeContentController extends Controller
      * @param  \App\HomeContent  $homeContent
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, HomeContent $homeContent)
+    public function update(Request $request, HomeContent $home_content)
     {
-        //
+        //dd($request->all());
+        $home_content->title = empty(request()->title) ? $home_content->title : request()->title;
+        $home_content->body = empty(request()->body) ? $home_content->body : request()->body;
+        //return $home_content;
+        $home_content->update();
+        return redirect()->back()->with('status', 'Content udpated'); 
     }
 
     /**
