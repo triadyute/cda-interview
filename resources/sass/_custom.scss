@@ -1,0 +1,83 @@
+.container-fluid .custom-container{
+    padding: 0 100px;
+}
+
+.home-jumbotron{
+    padding-top: 27%;
+    background: url('/img/cda-interview-guide.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    border-radius: 0;
+}
+
+.contact-jumbotron{
+    padding-top: 27%;
+    background: url('/img/contact-us.png');
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    border-radius: 0;
+}
+
+.jumbotron-heading{
+    color: #fff;
+    font-size: 3.5em;
+}
+
+.header-box{
+    border-bottom: solid 2px #fff;
+}
+a{
+    color: #ff6600;
+    text-decoration: none; 
+}
+
+a:hover{
+    color: #808080;
+    text-decoration: none; 
+}
+a:active{
+    color: #808080;
+    text-decoration: none; 
+}
+a.nav-link{
+    font-size: 17px;
+}
+
+.custom-list{
+    list-style: none;
+    padding-left:0;
+}
+
+ol{
+    padding-left: 1em;
+}
+
+.form-input-field{
+    background: #CCCCCC;
+}
+
+.navbar{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top:0px;
+}
+
+.navbar-nav{
+    position: relative;
+    top:-10px;
+}
+
+.custom-footer{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+.card-header{
+    background-color: #fff !important;
+}
