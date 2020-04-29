@@ -24,13 +24,14 @@
     <section class="jumbotron text-center contact-jumbotron">
     </section>
     <!-- Begin page content -->
-    <main role="main" class="ontainer-fluid custom-container" style="padding-left:50px; padding-right:50px;">
-        <h5><strong>BeMo Academic Consulting Inc.</strong></h5>
-        <p><u>Toll Free:</u> 1-855-900-BeMo (2366)</p>
-        <p><u>Email:</u> info@bemoacademicconsulting.com</p>
+    <main role="main" class="container-fluid custom-container" style="padding-left:50px; padding-right:50px;">
+        <h5><strong>{{$contact_content->title}}</strong></h5>
+        <p><u>Toll Free:</u> {{$contact_content->phone}}</p>
+        <p><u>Email:</u> {{$contact_content->email}}</p>
         <div class="row">
-            <div class="col-md-12">
-                <form action="">
+            <div class="col-md-12 pb-5">
+                <form method="POST" action="{{route('contact.send-mail', $contact_content)}}">
+                    @csrf
                     <div class="form-group text-center">
                         <label for="name">NAME</label>*
                         <input type="text" name="name" placeholder="Name" class="form-control form-input-field">
@@ -40,7 +41,7 @@
                         <input type="text" name="email" placeholder="Email" class="form-control form-input-field">
                     </div>
                     <div class="form-group text-center">
-                        <label for="email">WHAT CAN WE HELP YOU WITH?</label>*
+                        <label for="email">HOW CAN WE HELP YOU?</label>*
                         <textarea rows="3" name="message" placeholder="Message" class="form-control form-input-field"></textarea>
                     </div>
                     <div class="form-group text-center">

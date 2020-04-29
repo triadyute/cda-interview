@@ -70,9 +70,13 @@ class HomeContentController extends Controller
     public function update(Request $request, HomeContent $home_content)
     {
         //dd($request->all());
+        $detail=$request->message;
+		$dom = new \domdocument();
+        $dom->loadHtml($detail, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $detail = $dom->savehtml();
+        //return $detail;
         $home_content->title = empty(request()->title) ? $home_content->title : request()->title;
-        $home_content->body = empty(request()->body) ? $home_content->body : request()->body;
-        //return $home_content;
+        $home_content->body = empty(request()->message) ? $home_content->body : $detail;
         $home_content->update();
         return redirect()->back()->with('status', 'Content udpated'); 
     }

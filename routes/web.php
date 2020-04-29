@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\HomeContent;
+use App\ContactContent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,10 +20,15 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/contact-us', function () {
-    return view('contact');
+    $contact_content = ContactContent::find(1);
+    return view('contact.contact', compact('contact_content'));
 })->name('contact-us');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/homepage/{home_content}', 'HomeContentController@update')->name('home-content.update');
+Route::post('/contact/{contact_content}', 'ContactContentController@update')->name('contact-content.update');
+Route::get('/contact/edit', 'ContactContentController@edit')->name('contact.edit');
+Route::post('/contact', 'ContactContentController@sendMail')->name('contact.send-mail');
+Route::post('/contact/{contact_content}', 'ContactContentController@update')->name('contact.update');
 Auth::routes();

@@ -1,7 +1,7 @@
 <header class="header">
     <div class="logo-container">
         <a href="{{route('home')}}" class="logo">
-            <img src="{{asset('/img/bemo-logo2.png')}}" width="75" height="35" alt="Porto Admin" />
+            <img src="{{asset('/img/bemo-logo2.png')}}" width="75" height="40" alt="Porto Admin" />
         </a>
         <div class="d-md-none toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
             <i class="fas fa-bars" aria-label="Toggle sidebar"></i>
@@ -11,7 +11,7 @@
     <!-- start: search & user box -->
     <div class="header-right">
 
-        <form action="pages-search-results.html" class="search nav-form">
+        {{-- <form action="pages-search-results.html" class="search nav-form">
             <div class="input-group">
                 <input type="text" class="form-control" name="q" id="q" placeholder="Search...">
                 <span class="input-group-append">
@@ -20,9 +20,9 @@
             </div>
         </form>
 
-        <span class="separator"></span>
+        <span class="separator"></span> --}}
 
-        <ul class="notifications">
+        {{-- <ul class="notifications">
             <li>
                 <a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
                     <i class="fas fa-tasks"></i>
@@ -181,15 +181,15 @@
                     </div>
                 </div>
             </li>
-        </ul>
+        </ul> --}}
 
         <span class="separator"></span>
 
         <div id="userbox" class="userbox">
             <a href="#" data-toggle="dropdown">
-                <figure class="profile-picture">
+                {{-- <figure class="profile-picture">
                     <img src="img/!logged-user.jpg" alt="Joseph Doe" class="rounded-circle" data-lock-picture="img/!logged-user.jpg" />
-                </figure>
+                </figure> --}}
                 <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
                     <span class="name">John Doe Junior</span>
                     <span class="role">administrator</span>

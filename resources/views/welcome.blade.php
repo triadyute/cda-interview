@@ -31,10 +31,10 @@
     <!-- Begin page content -->
     <main role="main" class="container-fluid custom-container pb-5" style="padding-left:50px; padding-right:50px;">
       <div class="row">
-        <div class="col-md-12 pb-3">
+        <div class="col-md-12 pb-5">
           <h5 class="mt-1"><strong>{{$home_content->title}}</strong>
           </h5>
-            <p>{{$home_content->body}}</p>
+            {!!$home_content->body!!}
         </div>
       </div>
     </main>
