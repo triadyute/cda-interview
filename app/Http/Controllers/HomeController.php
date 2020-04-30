@@ -26,6 +26,6 @@ class HomeController extends Controller
     {
         $home_content = HomeContent::find(1);
         
-        return view('home', compact('home_content', 'photo'));
+        return view('home', compact('home_content'));
     }
 }

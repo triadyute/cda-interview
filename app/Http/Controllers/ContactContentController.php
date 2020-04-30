@@ -77,6 +77,21 @@ class ContactContentController extends Controller
      */
     public function update(Request $request, ContactContent $contact_content)
     {
+        if($request->photo)
+        {
+            //dd($request->all());
+            $fileNameWithExt = $request->file('photo')->getClientOriginalName();
+            $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('photo')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            $path = $request->file('photo')->storeAs('public/photos', $fileNameToStore);
+            //return $path;
+            $photo_id = $fileNameToStore;
+            //return $photo_id;
+            $photo = Photo::find(2);
+            $photo->name = $photo_id;
+            $photo->update();
+        }
         $contact_content->title = empty(request()->title) ? $contact_content->title : request()->title;
         $contact_content->phone = empty(request()->phone) ? $contact_content->phone : request()->phone;
         $contact_content->email = empty(request()->email) ? $contact_content->email : request()->email;

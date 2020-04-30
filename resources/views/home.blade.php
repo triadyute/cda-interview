@@ -6,10 +6,10 @@
         @include('inc.messages')
         <section class="card">
             <header class="card-header">
-                <div class="card-actions">
+                <div class="card-actions" id="app">
                     <toggle-no-index-home></toggle-no-index-home>
-                    <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
-                    <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
+                    {{-- <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+                    <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a> --}}
                 </div>
 
                 <h2 class="card-title">Edit Homepage Content</h2>
