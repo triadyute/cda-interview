@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Notification;
 use App\User;
 use App\Photo;
+use App\GooglePixelId;
 use App\Notifications\EmailReceived;
 class ContactContentController extends Controller
 {
@@ -66,7 +67,8 @@ class ContactContentController extends Controller
     public function edit()
     {
         $contact_content = ContactContent::find(1);
-        return view('contact.edit', compact('contact_content'));
+        $google_pixel_id = GooglePixelId::find(1);
+        return view('contact.edit', compact('contact_content', 'google_pixel_id'));
     }
 
     /**
@@ -93,6 +95,14 @@ class ContactContentController extends Controller
             $photo->name = $photo_id;
             $photo->update();
         }
+
+        if($request->google_pixel_id){
+            //dd(request()->all());
+            $google_pixel_id = GooglePixelId::find(1);
+            $google_pixel_id->google_pixel_id = empty(request()->google_pixel_id) ? $google_pixel_id->google_pixel_id : request()->google_pixel_id;
+            $google_pixel_id->update();
+        }
+
         $contact_content->title = empty(request()->title) ? $contact_content->title : request()->title;
         $contact_content->phone = empty(request()->phone) ? $contact_content->phone : request()->phone;
         $contact_content->email = empty(request()->email) ? $contact_content->email : request()->email;

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\HomeContent;
 use App\Photo;
 use Illuminate\Http\Request;
+use App\GooglePixelId;
 
 class HomeContentController extends Controller
 {
@@ -38,6 +39,14 @@ class HomeContentController extends Controller
             $photo->name = $photo_id;
             $photo->update();
         }
+
+        if($request->google_pixel_id){
+            //dd(request()->all());
+            $google_pixel_id = GooglePixelId::find(1);
+            $google_pixel_id->google_pixel_id = empty(request()->google_pixel_id) ? $google_pixel_id->google_pixel_id : request()->google_pixel_id;
+            $google_pixel_id->update();
+        }
+
         //dd($request->all());
         $detail=$request->message;
 		$dom = new \domdocument();

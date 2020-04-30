@@ -12,7 +12,7 @@
                     <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
                 </div>
 
-                <h2 class="card-title">Edit Homepage Content</h2>
+                <h2 class="card-title">Edit Contact page Content</h2>
             </header>
             <div class="card-body">
                 <form class="form-horizontal form-bordered" method="POST"
@@ -52,19 +52,26 @@
                         <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Contact Page
                             Email</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="email"
+                            <input type="email" class="form-control" id="inputDefault" name="email"
                                 value="{{$contact_content->email}}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Receive emails at</label>
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Receive Emails at</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="cda_email"
+                            <input type="email" class="form-control" id="inputDefault" name="cda_email"
                                 value="{{$contact_content->cda_email}}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Replace Homepage
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Google Pixel Id</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="inputDefault" name="google_pixel_id"
+                                value="{{$google_pixel_id->google_pixel_id}}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Replace Main
                             Image</label>
                         <div class="col-lg-8">
                             <input type="file" name="photo">

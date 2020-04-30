@@ -41,6 +41,12 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Google Pixel Id</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="inputDefault" name="google_pixel_id" value="{{$google_pixel_id->google_pixel_id}}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Homepage
                             Body</label>
                         <div class="col-lg-8">
@@ -49,7 +55,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Replace Homepage
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Replace Main
                             Image</label>
                         <div class="col-lg-8">
                             <input type="file" name="photo">

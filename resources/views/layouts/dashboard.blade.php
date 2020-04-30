@@ -56,7 +56,7 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>Edit Homepage Content</h2>
+						<h2>Edit Page</h2>
 					
 						<div class="right-wrapper text-right">
 							<ol class="breadcrumbs">

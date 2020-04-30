@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
          $this->call(UsersTableSeeder::class);
          $this->call(PhotosTableSeeder::class);
+         $this->call(GooglePixelIdsTableSeeder::class);
          $this->call(HomePageContentsTableSeeder::class);
          $this->call(ContactContentsTableSeeder::class);
     }
