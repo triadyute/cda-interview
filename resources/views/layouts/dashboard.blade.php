@@ -45,7 +45,6 @@
 	</head>
 	<body>
 		<section class="body">
-
 			<!-- start: header -->
             @include('inc.dashboard-header')
             <!-- end: header -->
