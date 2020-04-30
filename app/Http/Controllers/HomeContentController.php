@@ -23,7 +23,6 @@ class HomeContentController extends Controller
      */
     public function update(Request $request, HomeContent $home_content)
     {
-        
         if($request->photo)
         {
             //dd($request->all());
@@ -35,9 +34,9 @@ class HomeContentController extends Controller
             //return $path;
             $photo_id = $fileNameToStore;
             //return $photo_id;
-            $photo = Photo::create();
+            $photo = Photo::find(1);
             $photo->name = $photo_id;
-            $photo->save();
+            $photo->update();
         }
         //dd($request->all());
         $detail=$request->message;

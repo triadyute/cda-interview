@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $home_content = HomeContent::find(1);
-        //$photo = 
-        return view('home', compact('home_content'));
+        
+        return view('home', compact('home_content', 'photo'));
     }
 }

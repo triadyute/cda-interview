@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\HomeContent;
 use App\ContactContent;
+use App\Photo;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +17,8 @@ use App\ContactContent;
 
 Route::get('/', function () {
     $home_content = HomeContent::find(1);
-    return view('welcome', compact('home_content'));
+    $photo = Photo::find(1);
+    return view('welcome', compact('home_content', 'photo'));
 })->name('welcome');
 
 Route::get('/test', function () {
