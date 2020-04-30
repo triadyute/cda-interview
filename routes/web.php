@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome', compact('home_content'));
 })->name('welcome');
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 Route::get('/contact-us', function () {
     $contact_content = ContactContent::find(1);
     return view('contact.contact', compact('contact_content'));

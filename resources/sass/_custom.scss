@@ -1,10 +1,9 @@
-.container-fluid .custom-container{
+.custom-container{
     padding: 0 100px;
 }
 
 .home-jumbotron{
-    padding-top: 27%;
-    background: url('/img/cda-interview-guide.jpg');
+    // background: url('/img/cda-interview-guide.jpg');
     background-position: center center;
     background-size: cover;
     height: 100vh;
@@ -28,6 +27,7 @@
 .header-box{
     border-bottom: solid 2px #fff;
 }
+
 a{
     color: #ff6600;
     text-decoration: none; 

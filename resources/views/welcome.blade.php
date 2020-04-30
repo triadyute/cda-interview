@@ -21,12 +21,10 @@
   <body>
 
     @include('inc.header')
-    <section class="jumbotron text-center home-jumbotron">
-        <div class="container">
-            <div class="header-box">
-                <h1 class="jumbotron-heading">CDA Interview Guide</h1>
+    <section class="jumbotron text-center home-jumbotron">      
+            <div>
+              <img src="{{asset('/img/cda-interview-guide.jpg')}}" alt="" style="width:100% !important; height:auto !important;">
             </div>
-        </div>
     </section>
     <!-- Begin page content -->
     <main role="main" class="container-fluid custom-container pb-5" style="padding-left:50px; padding-right:50px;">

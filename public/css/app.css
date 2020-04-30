@@ -10882,17 +10882,11 @@ a.text-dark:focus {
   }
 }
 
-.container-fluid .custom-container,
-.container-sm .custom-container,
-.container-md .custom-container,
-.container-lg .custom-container,
-.container-xl .custom-container {
+.custom-container {
   padding: 0 100px;
 }
 
 .home-jumbotron {
-  padding-top: 27%;
-  background: url("/img/cda-interview-guide.jpg");
   background-position: center center;
   background-size: cover;
   height: 100vh;
