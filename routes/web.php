@@ -27,7 +27,8 @@ Route::get('/test', function () {
 
 Route::get('/contact-us', function () {
     $contact_content = ContactContent::find(1);
-    return view('contact.contact', compact('contact_content'));
+    $photo = Photo::find(2);
+    return view('contact.contact', compact('contact_content', 'photo'));
 })->name('contact-us');
 Auth::routes();
 

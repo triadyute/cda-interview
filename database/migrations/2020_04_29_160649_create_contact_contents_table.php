@@ -18,6 +18,7 @@ class CreateContactContentsTable extends Migration
             $table->string('title');
             $table->string('phone');
             $table->string('email');
+            $table->string('cda_email');
             $table->timestamps();
         });
     }

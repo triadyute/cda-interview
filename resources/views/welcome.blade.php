@@ -22,9 +22,12 @@
 
     @include('inc.header')
     <section class="jumbotron text-center home-jumbotron">      
-            <div>
+            <div class="text-center">
               <img src="{{asset('/storage/photos/' . $photo->name)}}" style="width:100% !important; height: 100vh !important;">
               {{-- <img src="{{asset('/img/cda-interview-guide.jpg')}}" alt="" style="width:100% !important; height: 100vh !important;"> --}}
+              <div class="showcase-text-box">
+                <div class="showcase-text">CDA Interview Guide</div>
+              </div>
             </div>
     </section>
     <!-- Begin page content -->

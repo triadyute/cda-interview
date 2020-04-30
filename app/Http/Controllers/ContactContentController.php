@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Notification;
 use App\User;
+use App\Photo;
 use App\Notifications\EmailReceived;
 class ContactContentController extends Controller
 {
@@ -40,8 +41,8 @@ class ContactContentController extends Controller
     {
         $email = array('name' => $request->name, 'email' => $request->email, 'message' => $request->message);
         $email_message = (object) $email;
-        $user = User::find(1);
-        Notification::send($user, new EmailReceived($email_message));
+        $contact = ContactContent::find(1);
+        Notification::route('mail', $contact->cda_email)->notify(new EmailReceived($email_message));
         return redirect()->back()->with('status', 'Thanks for contacting us!'); 
     }
 
@@ -95,6 +96,7 @@ class ContactContentController extends Controller
         $contact_content->title = empty(request()->title) ? $contact_content->title : request()->title;
         $contact_content->phone = empty(request()->phone) ? $contact_content->phone : request()->phone;
         $contact_content->email = empty(request()->email) ? $contact_content->email : request()->email;
+        $contact_content->cda_email = empty(request()->cda_email) ? $contact_content->cda_email : request()->cda_email;
         $contact_content->update();
         return redirect()->back()->with('status', 'Content udpated'); 
     }

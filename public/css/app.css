@@ -10909,6 +10909,22 @@ a.text-dark:focus {
   border-bottom: solid 2px #fff;
 }
 
+.showcase-text {
+  color: #fff;
+  position: absolute;
+  top: 25%;
+  width: 60%;
+  margin: 0 auto !important;
+  text-align: center;
+  font-size: 322%;
+  z-index: 1000;
+  border-bottom: 2px solid #fff;
+}
+
+.showcase-text-box {
+  padding: 20% !important;
+}
+
 a {
   color: #ff6600;
   text-decoration: none;

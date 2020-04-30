@@ -17,6 +17,8 @@ class CreateHomeContentsTable extends Migration
             $table->id();
             $table->string('title');
             $table->longText('body');
+            $table->string('meta_title')->nullable();
+            $table->text('meta_description')->nullable();
             $table->timestamps();
         });
     }

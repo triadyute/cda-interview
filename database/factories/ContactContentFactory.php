@@ -9,6 +9,7 @@ $factory->define(ContactContent::class, function (Faker $faker) {
     return [
         'title' => 'BeMo Academic Consulting Inc.',
         'phone' => '1-855-900-BeMo (2366)',
-        'email' => 'info@bemoacademicconsulting.com'
+        'email' => 'info@bemoacademicconsulting.com',
+        'cda_email' => 'foo@bar.com'
     ];
 });

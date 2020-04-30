@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class HomeContent extends Model
 {
-    protected $fillable = ['title', 'body'];
+    protected $fillable = ['title', 'body', 'meta_title', 'meta_description'];
 }

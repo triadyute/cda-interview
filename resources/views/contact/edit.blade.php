@@ -27,8 +27,22 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Homepage
+                            Meta Title</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="inputDefault" name="meta_title">
+                        </div>
+					</div>
+					<div class="form-group row">
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Homepage
+                            Meta Description</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="inputDefault" name="meta_description">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Contact Page
-                            Title</label>
+                            Phone</label>
                         <div class="col-lg-8">
                             <input type="text" class="form-control" id="inputDefault" name="phone"
                                 value="{{$contact_content->phone}}">
@@ -36,10 +50,24 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Contact Page
-                            Title</label>
+                            Email</label>
                         <div class="col-lg-8">
                             <input type="text" class="form-control" id="inputDefault" name="email"
                                 value="{{$contact_content->email}}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Receive emails at</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="inputDefault" name="cda_email"
+                                value="{{$contact_content->cda_email}}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Replace Homepage
+                            Image</label>
+                        <div class="col-lg-8">
+                            <input type="file" name="photo">
                         </div>
                     </div>
                     <div class="form-group row">
