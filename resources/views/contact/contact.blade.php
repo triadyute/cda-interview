@@ -27,7 +27,7 @@
         </div>
     </section>
     <!-- Begin page content -->
-    <main role="main" class="container-fluid custom-container pt-5 pb-5" style="padding-left:50px; padding-right:50px;">
+    <main role="main" class="container-fluid custom-container pt-5 pb-5 clearfix" style="padding-left:50px; padding-right:50px;">
          @include('inc.messages')
         <h5><strong>{{$contact_content->title}}</strong></h5>
         <p><u>Toll Free:</u> {{$contact_content->phone}}</p>
