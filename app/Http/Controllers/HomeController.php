@@ -27,6 +27,7 @@ class HomeController extends Controller
     {
         $home_content = HomeContent::find(1);
         $facebook_pixel_id = FacebookPixel::find(1);
-        return view('home', compact('home_content', 'facebook_pixel_id'));
+        $google_analytics_id = GoogleAnalytics::find(1);
+        return view('home', compact('home_content', 'facebook_pixel_id', 'google_analytics_id'));
     }
 }

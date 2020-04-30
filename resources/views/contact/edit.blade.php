@@ -71,6 +71,13 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Google Analytics Id</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="inputDefault" name="google_analytics_id"
+                                value="{{$google_analytics_id->google_analytics_id}}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Replace Main
                             Image</label>
                         <div class="col-lg-8">
