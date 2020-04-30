@@ -21,10 +21,14 @@
   <body>
 
     @include('inc.header')
-    <section class="jumbotron text-center contact-jumbotron">
+    <section class="jumbotron text-center home-jumbotron">      
+        <div>
+          <img src="{{asset('/img/contact-us.png')}}" alt="" style="width:100% !important; height:auto !important;">
+        </div>
     </section>
     <!-- Begin page content -->
     <main role="main" class="container-fluid custom-container" style="padding-left:50px; padding-right:50px;">
+        @include('inc.messages')
         <h5><strong>{{$contact_content->title}}</strong></h5>
         <p><u>Toll Free:</u> {{$contact_content->phone}}</p>
         <p><u>Email:</u> {{$contact_content->email}}</p>

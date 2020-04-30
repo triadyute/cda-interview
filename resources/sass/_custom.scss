@@ -11,8 +11,6 @@
 }
 
 .contact-jumbotron{
-    padding-top: 27%;
-    background: url('/img/contact-us.png');
     background-position: center center;
     background-size: cover;
     height: 100vh;
@@ -80,4 +78,8 @@ textarea.form-control {
 
 .card-header{
     background-color: #fff !important;
+}
+
+.jumbotron{
+    padding: 0;
 }
