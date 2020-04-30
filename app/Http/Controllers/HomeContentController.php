@@ -3,62 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\HomeContent;
+use App\Photo;
 use Illuminate\Http\Request;
 
 class HomeContentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\HomeContent  $homeContent
-     * @return \Illuminate\Http\Response
-     */
     public function show(HomeContent $homeContent)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\HomeContent  $homeContent
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(HomeContent $homeContent)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -69,6 +23,22 @@ class HomeContentController extends Controller
      */
     public function update(Request $request, HomeContent $home_content)
     {
+        
+        if($request->photo)
+        {
+            //dd($request->all());
+            $fileNameWithExt = $request->file('photo')->getClientOriginalName();
+            $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('photo')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            $path = $request->file('photo')->storeAs('public/photos', $fileNameToStore);
+            //return $path;
+            $photo_id = $fileNameToStore;
+            //return $photo_id;
+            $photo = Photo::create();
+            $photo->name = $photo_id;
+            $photo->save();
+        }
         //dd($request->all());
         $detail=$request->message;
 		$dom = new \domdocument();
@@ -78,17 +48,8 @@ class HomeContentController extends Controller
         $home_content->title = empty(request()->title) ? $home_content->title : request()->title;
         $home_content->body = empty(request()->message) ? $home_content->body : $detail;
         $home_content->update();
+        
         return redirect()->back()->with('status', 'Content udpated'); 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\HomeContent  $homeContent
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(HomeContent $homeContent)
-    {
-        //
-    }
 }

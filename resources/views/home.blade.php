@@ -52,7 +52,7 @@
                         <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Replace Homepage
                             Image</label>
                         <div class="col-lg-8">
-                            <input type="file" name="image">
+                            <input type="file" name="photo">
                         </div>
                     </div>
                     <div class="form-group row">

@@ -23,7 +23,8 @@
     @include('inc.header')
     <section class="jumbotron text-center home-jumbotron">      
             <div>
-              <img src="{{asset('/img/cda-interview-guide.jpg')}}" alt="" style="width:100% !important; height:auto !important;">
+              <img src="{{asset('/storage/photos/cda-interview-guide.jpg')}}" style="width:100% !important; height: 100vh !important;">
+              {{-- <img src="{{asset('/img/cda-interview-guide.jpg')}}" alt="" style="width:100% !important; height: 100vh !important;"> --}}
             </div>
     </section>
     <!-- Begin page content -->
