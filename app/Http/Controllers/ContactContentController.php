@@ -98,11 +98,18 @@ class ContactContentController extends Controller
             $photo->update();
         }
 
-        if($request->google_pixel_id){
+        if($request->facebook_pixel_id){
             //dd(request()->all());
-            $google_pixel_id =FacebookPixel::find(1);
-            $google_pixel_id->google_pixel_id = empty(request()->google_pixel_id) ? $google_pixel_id->google_pixel_id : request()->google_pixel_id;
-            $google_pixel_id->update();
+            $facebook_pixel_id = FacebookPixel::find(1);
+            $facebook_pixel_id->facebook_pixel_id = empty(request()->facebook_pixel_id) ? $facebook_pixel_id->facebook_pixel_id : request()->facebook_pixel_id;
+            $facebook_pixel_id->update();
+        }
+
+        if($request->google_analytics_id){
+            //dd(request()->all());
+            $google_analytics_id =GoogleAnalytics::find(1);
+            $google_analytics_id->google_analytics_id = empty(request()->google_analytics_id) ? $google_analytics_id->google_analytics_id : request()->google_analytics_id;
+            $google_analytics_id->update();
         }
 
         $contact_content->title = empty(request()->title) ? $contact_content->title : request()->title;
