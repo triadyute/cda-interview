@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGooglePixelIdsTable extends Migration
+class CreateFacebookPixelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateGooglePixelIdsTable extends Migration
      */
     public function up()
     {
-        Schema::create('google_pixel_ids', function (Blueprint $table) {
+        Schema::create('facebook_pixels', function (Blueprint $table) {
             $table->id();
-            $table->string('google_pixel_id');
+            $table->string('facebook_pixel_id');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateGooglePixelIdsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('google_pixel_ids');
+        Schema::dropIfExists('facebook_pixels');
     }
 }

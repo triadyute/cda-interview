@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\HomeContent;
-use App\GooglePixelId;
+use App\FacebookPixel;
 class HomeController extends Controller
 {
     /**
@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $home_content = HomeContent::find(1);
-        $google_pixel_id = GooglePixelId::find(1);
-        return view('home', compact('home_content', 'google_pixel_id'));
+        $facebook_pixel_id = FacebookPixel::find(1);
+        return view('home', compact('home_content', 'facebook_pixel_id'));
     }
 }

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class GooglePixelIdsTableSeeder extends Seeder
+class FacebookPixelsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class GooglePixelIdsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\GooglePixelId::class, 1)->create();
+        factory(\App\FacebookPixel::class, 1)->create();
     }
 }

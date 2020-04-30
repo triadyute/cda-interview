@@ -64,10 +64,10 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Google Pixel Id</label>
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Facebook Pixel Id</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="google_pixel_id"
-                                value="{{$google_pixel_id->google_pixel_id}}">
+                            <input type="text" class="form-control" id="inputDefault" name="facebook_pixel_id"
+                                value="{{$facebook_pixel_id->facebook_pixel_id}}">
                         </div>
                     </div>
                     <div class="form-group row">

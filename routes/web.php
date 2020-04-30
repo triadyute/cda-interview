@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\HomeContent;
 use App\ContactContent;
 use App\Photo;
-use App\GooglePixelId;
+use App\FacebookPixel;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +19,7 @@ use App\GooglePixelId;
 Route::get('/', function () {
     $home_content = HomeContent::find(1);
     $photo = Photo::find(1);
-    $pixelid = GooglePixelId::find(1);
+    $pixelid = FacebookPixel::find(1);
     return view('welcome', compact('home_content', 'photo', 'pixelid'));
 })->name('welcome');
 
@@ -30,7 +30,7 @@ Route::get('/test', function () {
 Route::get('/contact-us', function () {
     $contact_content = ContactContent::find(1);
     $photo = Photo::find(2);
-    $pixelid = GooglePixelId::find(1);
+    $pixelid = FacebookPixel::find(1);
     return view('contact.contact', compact('contact_content', 'photo', 'pixelid'));
 })->name('contact-us');
 Auth::routes();

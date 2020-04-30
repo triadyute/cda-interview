@@ -26,7 +26,7 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', "'{"+ {{$pixelid->google_pixel_id}} +"}'");
+        fbq('init', "'{"+ {{$pixelid->facebook_pixel_id}} +"}'");
         fbq('track', 'PageView');
       </script>
       <noscript>
