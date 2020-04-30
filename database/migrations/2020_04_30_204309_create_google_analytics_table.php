@@ -15,6 +15,7 @@ class CreateGoogleAnalyticsTable extends Migration
     {
         Schema::create('google_analytics', function (Blueprint $table) {
             $table->id();
+            $table->string('google_analytics_id');
             $table->timestamps();
         });
     }

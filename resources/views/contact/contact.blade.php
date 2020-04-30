@@ -32,9 +32,19 @@
         </script>
         <noscript>
         <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id={your-pixel-id-goes-here}&ev=PageView&noscript=1"/>
+            src="{!! 'https://www.facebook.com/tr?id={'. $pixelid->facebook_pixel_id. '}&ev=PageView&noscript=1}'!!}"/>
         </noscript>
     <!-- End Facebook Pixel Code -->
+
+            
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="{{'https://www.googletagmanager.com/gtag/js?id='. $analytics->google_analytics_id}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', @json($analytics->google_analytics_id));
+    </script>
   </head>
 
   <body>

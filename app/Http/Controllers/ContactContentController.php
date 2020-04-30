@@ -9,6 +9,7 @@ use Notification;
 use App\User;
 use App\Photo;
 use App\FacebookPixel;
+use App\GoogleAnalytics;
 use App\Notifications\EmailReceived;
 class ContactContentController extends Controller
 {
@@ -68,7 +69,8 @@ class ContactContentController extends Controller
     {
         $contact_content = ContactContent::find(1);
         $facebook_pixel_id = FacebookPixel::find(1);
-        return view('contact.edit', compact('contact_content', 'facebook_pixel_id'));
+        $google_analytics_id = GoogleAnalytics::find(1);
+        return view('contact.edit', compact('contact_content', 'facebook_pixel_id', 'google_analytics_id'));
     }
 
     /**

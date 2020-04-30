@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\HomeContent;
 use App\FacebookPixel;
+use App\GoogleAnalytics;
 class HomeController extends Controller
 {
     /**

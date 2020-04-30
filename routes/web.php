@@ -5,6 +5,7 @@ use App\HomeContent;
 use App\ContactContent;
 use App\Photo;
 use App\FacebookPixel;
+use App\GoogleAnalytics;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,19 +21,18 @@ Route::get('/', function () {
     $home_content = HomeContent::find(1);
     $photo = Photo::find(1);
     $pixelid = FacebookPixel::find(1);
-    return view('welcome', compact('home_content', 'photo', 'pixelid'));
+    $analytics = GoogleAnalytics::find(1);
+    return view('welcome', compact('home_content', 'photo', 'pixelid', 'analytics'));
 })->name('welcome');
-
-Route::get('/test', function () {
-    return view('test');
-});
 
 Route::get('/contact-us', function () {
     $contact_content = ContactContent::find(1);
     $photo = Photo::find(2);
     $pixelid = FacebookPixel::find(1);
-    return view('contact.contact', compact('contact_content', 'photo', 'pixelid'));
+    $analytics = GoogleAnalytics::find(1);
+    return view('contact.contact', compact('contact_content', 'photo', 'pixelid', 'analytics'));
 })->name('contact-us');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
