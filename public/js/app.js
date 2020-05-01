@@ -1921,6 +1921,7 @@ __webpack_require__.r(__webpack_exports__);
 
 Vue.use(vue_js_toggle_button__WEBPACK_IMPORTED_MODULE_0__["ToggleButton"]);
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['home_content'],
   components: {
     ToggleButton: vue_js_toggle_button__WEBPACK_IMPORTED_MODULE_0__["ToggleButton"]
   },

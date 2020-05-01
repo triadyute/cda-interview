@@ -10,6 +10,7 @@
     import { ToggleButton } from 'vue-js-toggle-button';
     Vue.use(ToggleButton);
     export default {
+        props:['home_content'],
         components: {
             ToggleButton
         },

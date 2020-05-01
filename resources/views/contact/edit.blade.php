@@ -19,7 +19,7 @@
                     action="{{route('contact.update', $contact_content)}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Contact Page
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="title">Contact Page
                             Title</label>
                         <div class="col-lg-8">
                             <input type="text" class="form-control" id="inputDefault" name="title"
@@ -27,61 +27,61 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Contact page
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="meta_title">Contact page
                             Meta Title</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="meta_title" value="{{$contact_content->meta_title}}">
+                            <input type="text" class="form-control" id="meta_title" name="meta_title" value="{{$contact_content->meta_title}}">
                         </div>
 					</div>
 					<div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Contact page
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="meta_description">Contact page
                             Meta Description</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="meta_description" value="{{$contact_content->meta_description}}">
+                            <input type="text" class="form-control" id="meta_description" name="meta_description" value="{{$contact_content->meta_description}}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Contact Page
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="phone">Contact Page
                             Phone</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="phone"
+                            <input type="text" class="form-control" id="phone" name="phone"
                                 value="{{$contact_content->phone}}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Contact Page
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="email">Contact Page
                             Email</label>
                         <div class="col-lg-8">
-                            <input type="email" class="form-control" id="inputDefault" name="email"
+                            <input type="email" class="form-control" id="email" name="email"
                                 value="{{$contact_content->email}}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Receive Emails at</label>
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="cda_email">Receive Emails at</label>
                         <div class="col-lg-8">
-                            <input type="email" class="form-control" id="inputDefault" name="cda_email"
+                            <input type="email" class="form-control" id="cda_email" name="cda_email"
                                 value="{{$contact_content->cda_email}}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Facebook Pixel Id</label>
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="facebook_pixel_id">Facebook Pixel Id</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="facebook_pixel_id"
+                            <input type="text" class="form-control" id="facebook_pixel_id" name="facebook_pixel_id"
                                 value="{{$facebook_pixel_id->facebook_pixel_id}}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Google Analytics Id</label>
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="google_analytics_id">Google Analytics Id</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="google_analytics_id"
+                            <input type="text" class="form-control" id="google_analytics_id" name="google_analytics_id"
                                 value="{{$google_analytics_id->google_analytics_id}}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Replace Main
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="google_analytics_id">Replace Main
                             Image</label>
                         <div class="col-lg-8">
-                            <input type="file" name="photo">
+                            <input type="file" name="photo" id="google_analytics_id">
                         </div>
                     </div>
                     <div class="form-group row">
