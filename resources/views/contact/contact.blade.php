@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+
+    <meta name="title" content="{{$contact_content->meta_title}}">
+    <meta name="description" content="{{$contact_content->meta_description}}">
+    <meta name="robots" content="{{$contact_content->meta_noindex}}">
+
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
@@ -31,8 +35,7 @@
         fbq('track', 'PageView');
         </script>
         <noscript>
-        <img height="1" width="1" style="display:none"
-            src="{!! 'https://www.facebook.com/tr?id={'. $pixelid->facebook_pixel_id. '}&ev=PageView&noscript=1}'!!}"/>
+            <img height="1" width="1" style="display:none" src="{!! 'https://www.facebook.com/tr?id={'. $pixelid->facebook_pixel_id. '}&ev=PageView&noscript=1}'!!}"/>
         </noscript>
     <!-- End Facebook Pixel Code -->
 
@@ -48,7 +51,6 @@
   </head>
 
   <body>
-
     @include('inc.header')
     <section class="jumbotron text-center home-jumbotron">      
         <div>

@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+
+    <meta name="title" content="{{$home_content->meta_title}}">
+    <meta name="description" content="{{$home_content->meta_description}}">
+    <meta name="robots" content="{{$home_content->meta_noindex}}">
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
@@ -45,9 +48,8 @@
   </head>
 
   <body>
-
     @include('inc.header')
-    <section class="jumbotron text-center home-jumbotron">      
+    <section class="jumbotron text-center home-jumbotron" style="background-color: #fff !important;">      
             <div class="text-center">
               <img src="{{asset('/storage/photos/' . $photo->name)}}" style="width:100% !important; height: 100vh !important;">
               {{-- <img src="{{asset('/img/cda-interview-guide.jpg')}}" alt="" style="width:100% !important; height: 100vh !important;"> --}}

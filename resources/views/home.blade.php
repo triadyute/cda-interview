@@ -30,14 +30,14 @@
                         <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Homepage
                             Meta Title</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="meta_title">
+                            <input type="text" class="form-control" id="inputDefault" name="meta_title" value="{{$home_content->meta_title}}">
                         </div>
 					</div>
 					<div class="form-group row">
                         <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Homepage
                             Meta Description</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="meta_description">
+                            <input type="text" class="form-control" id="inputDefault" name="meta_description" value="{{$home_content->meta_description}}">
                         </div>
                     </div>
                     <div class="form-group row">

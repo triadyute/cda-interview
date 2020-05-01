@@ -19,6 +19,7 @@ class CreateHomeContentsTable extends Migration
             $table->longText('body');
             $table->string('meta_title')->nullable();
             $table->text('meta_description')->nullable();
+            $table->text('meta_noindex')->nullable();
             $table->timestamps();
         });
     }

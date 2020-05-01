@@ -62,6 +62,8 @@ class HomeContentController extends Controller
         //return $detail;
         $home_content->title = empty(request()->title) ? $home_content->title : request()->title;
         $home_content->body = empty(request()->message) ? $home_content->body : $detail;
+        $home_content->meta_title = empty(request()->meta_title) ? $home_content->meta_title : request()->meta_title;
+        $home_content->meta_description = empty(request()->meta_description) ? $home_content->meta_description : request()->meta_description;
         $home_content->update();
         
         return redirect()->back()->with('status', 'Content udpated'); 

@@ -115,6 +115,8 @@ class ContactContentController extends Controller
         $contact_content->title = empty(request()->title) ? $contact_content->title : request()->title;
         $contact_content->phone = empty(request()->phone) ? $contact_content->phone : request()->phone;
         $contact_content->email = empty(request()->email) ? $contact_content->email : request()->email;
+        $contact_content->meta_title = empty(request()->meta_title) ? $contact_content->meta_title : request()->meta_title;
+        $contact_content->meta_description = empty(request()->meta_description) ? $contact_content->meta_description : request()->meta_description;
         $contact_content->cda_email = empty(request()->cda_email) ? $contact_content->cda_email : request()->cda_email;
         $contact_content->update();
         return redirect()->back()->with('status', 'Content udpated'); 

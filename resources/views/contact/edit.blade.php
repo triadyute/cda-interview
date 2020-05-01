@@ -27,17 +27,17 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Homepage
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Contact page
                             Meta Title</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="meta_title">
+                            <input type="text" class="form-control" id="inputDefault" name="meta_title" value="{{$contact_content->meta_title}}">
                         </div>
 					</div>
 					<div class="form-group row">
-                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Homepage
+                        <label class="col-lg-3 control-label text-lg-right pt-2" for="inputDefault">Contact page
                             Meta Description</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="inputDefault" name="meta_description">
+                            <input type="text" class="form-control" id="inputDefault" name="meta_description" value="{{$contact_content->meta_description}}">
                         </div>
                     </div>
                     <div class="form-group row">

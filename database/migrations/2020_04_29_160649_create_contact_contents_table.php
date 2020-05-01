@@ -19,6 +19,9 @@ class CreateContactContentsTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->string('cda_email');
+            $table->string('meta_title')->nullable();
+            $table->text('meta_description')->nullable();
+            $table->text('meta_noindex')->nullable();
             $table->timestamps();
         });
     }

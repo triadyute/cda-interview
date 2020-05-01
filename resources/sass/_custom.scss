@@ -5,6 +5,7 @@
 .home-jumbotron{
     // background: url('/img/cda-interview-guide.jpg');
     background-position: center center;
+    background-color: #fff !important;
     background-size: cover;
     height: 100vh;
     border-radius: 0;
@@ -99,4 +100,7 @@ textarea.form-control {
 .jumbotron{
     padding: 0;
     clear:both;
+}
+footer, .footer{
+    font-size: 13px !important;
 }
