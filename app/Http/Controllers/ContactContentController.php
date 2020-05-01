@@ -112,6 +112,13 @@ class ContactContentController extends Controller
             $google_analytics_id->update();
         }
 
+        if($request->meta_noindex){
+            $homepage_content = ContactContent::find(1);
+            $homepage_content->meta_noindex = request()->meta_noindex;
+            $homepage_content->save();
+            return response()->json($homepage_content);
+        }
+
         $contact_content->title = empty(request()->title) ? $contact_content->title : request()->title;
         $contact_content->phone = empty(request()->phone) ? $contact_content->phone : request()->phone;
         $contact_content->email = empty(request()->email) ? $contact_content->email : request()->email;

@@ -6,7 +6,7 @@
 
     <meta name="title" content="{{$contact_content->meta_title}}">
     <meta name="description" content="{{$contact_content->meta_description}}">
-    <meta name="robots" content="{{$contact_content->meta_noindex}}">
+    <meta name="robots" content="{{$contact_content->meta_noindex == false?'noindex':''}}">
 
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">

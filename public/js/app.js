@@ -1899,6 +1899,55 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ToggleNoIndexContact.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ToggleNoIndexContact.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_js_toggle_button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-js-toggle-button */ "./node_modules/vue-js-toggle-button/dist/index.js");
+/* harmony import */ var vue_js_toggle_button__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_js_toggle_button__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+Vue.use(vue_js_toggle_button__WEBPACK_IMPORTED_MODULE_0__["ToggleButton"]);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['contact_content'],
+  components: {
+    ToggleButton: vue_js_toggle_button__WEBPACK_IMPORTED_MODULE_0__["ToggleButton"]
+  },
+  data: function data() {
+    return {
+      noindex: this.contact_content.meta_noindex
+    };
+  },
+  methods: {
+    onChangeEventHandler: function onChangeEventHandler() {
+      axios.post('/contact/' + this.contact_content.id, this.contact_content).then(this.contact_content.meta_noindex = !this.noindex, console.log(this.contact_content))["catch"](function (error) {
+        // handle error
+        console.log(error);
+      });
+    }
+  },
+  mounted: function mounted() {
+    console.log(this.contact_content.id);
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ToggleNoIndexHome.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ToggleNoIndexHome.vue?vue&type=script&lang=js& ***!
@@ -1918,6 +1967,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 Vue.use(vue_js_toggle_button__WEBPACK_IMPORTED_MODULE_0__["ToggleButton"]);
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1925,13 +1977,21 @@ Vue.use(vue_js_toggle_button__WEBPACK_IMPORTED_MODULE_0__["ToggleButton"]);
   components: {
     ToggleButton: vue_js_toggle_button__WEBPACK_IMPORTED_MODULE_0__["ToggleButton"]
   },
+  data: function data() {
+    return {
+      noindex: !!this.home_content.meta_noindex
+    };
+  },
   methods: {
     onChangeEventHandler: function onChangeEventHandler() {
-      console.log('toggled');
+      axios.post('/homepage/' + this.home_content.id, this.home_content).then(this.home_content.meta_noindex = !this.home_content.meta_noindex, console.log(this.home_content))["catch"](function (error) {
+        // handle error
+        console.log(error);
+      });
     }
   },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    console.log(this.home_content.id);
   }
 });
 
@@ -38425,6 +38485,51 @@ module.exports = function listToStyles (parentId, list) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ToggleNoIndexContact.vue?vue&type=template&id=0526272e&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ToggleNoIndexContact.vue?vue&type=template&id=0526272e& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _vm._v("Search Engine Indexing\n    "),
+      _c("toggle-button", {
+        attrs: { labels: { checked: "On", unchecked: "Off" } },
+        on: {
+          change: function($event) {
+            return _vm.onChangeEventHandler()
+          }
+        },
+        model: {
+          value: _vm.noindex,
+          callback: function($$v) {
+            _vm.noindex = $$v
+          },
+          expression: "noindex"
+        }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ToggleNoIndexHome.vue?vue&type=template&id=776f8341&":
 /*!********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ToggleNoIndexHome.vue?vue&type=template&id=776f8341& ***!
@@ -38443,11 +38548,20 @@ var render = function() {
   return _c(
     "div",
     [
+      _vm._v("Search Engine Indexing\n    "),
       _c("toggle-button", {
+        attrs: { labels: { checked: "On", unchecked: "Off" } },
         on: {
           change: function($event) {
             return _vm.onChangeEventHandler()
           }
+        },
+        model: {
+          value: _vm.noindex,
+          callback: function($$v) {
+            _vm.noindex = $$v
+          },
+          expression: "noindex"
         }
       })
     ],
@@ -50633,6 +50747,7 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["default"];
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -50644,6 +50759,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('toggle-no-index-home', __webpack_require__(/*! ./components/ToggleNoIndexHome.vue */ "./resources/js/components/ToggleNoIndexHome.vue")["default"]);
+Vue.component('toggle-no-index-contact', __webpack_require__(/*! ./components/ToggleNoIndexContact.vue */ "./resources/js/components/ToggleNoIndexContact.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -50698,6 +50814,75 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/ToggleNoIndexContact.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/ToggleNoIndexContact.vue ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ToggleNoIndexContact_vue_vue_type_template_id_0526272e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ToggleNoIndexContact.vue?vue&type=template&id=0526272e& */ "./resources/js/components/ToggleNoIndexContact.vue?vue&type=template&id=0526272e&");
+/* harmony import */ var _ToggleNoIndexContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ToggleNoIndexContact.vue?vue&type=script&lang=js& */ "./resources/js/components/ToggleNoIndexContact.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ToggleNoIndexContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ToggleNoIndexContact_vue_vue_type_template_id_0526272e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ToggleNoIndexContact_vue_vue_type_template_id_0526272e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/ToggleNoIndexContact.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/ToggleNoIndexContact.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/ToggleNoIndexContact.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ToggleNoIndexContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ToggleNoIndexContact.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ToggleNoIndexContact.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ToggleNoIndexContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/ToggleNoIndexContact.vue?vue&type=template&id=0526272e&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/ToggleNoIndexContact.vue?vue&type=template&id=0526272e& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ToggleNoIndexContact_vue_vue_type_template_id_0526272e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ToggleNoIndexContact.vue?vue&type=template&id=0526272e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ToggleNoIndexContact.vue?vue&type=template&id=0526272e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ToggleNoIndexContact_vue_vue_type_template_id_0526272e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ToggleNoIndexContact_vue_vue_type_template_id_0526272e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 

@@ -25,6 +25,7 @@ class HomeContentController extends Controller
      */
     public function update(Request $request, HomeContent $home_content)
     {
+        //dd($request->all());
         if($request->photo)
         {
             //dd($request->all());
@@ -52,6 +53,13 @@ class HomeContentController extends Controller
             $google_analytics_id = GoogleAnalytics::find(1);
             $google_analytics_id->google_analytics_id = empty(request()->google_analytics_id) ? $google_analytics_id->google_analytics_id : request()->google_analytics_id;
             $google_analytics_id->update();
+        }
+        if($request->meta_noindex){
+                return $request->meta_noindex;
+                $homepage_content = HomeContent::find(1);
+                $homepage_content->meta_noindex = request()->meta_noindex;
+                $homepage_content->save();
+                return response()->json($homepage_content);
         }
 
         //dd($request->all());

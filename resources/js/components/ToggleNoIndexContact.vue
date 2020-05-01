@@ -13,21 +13,21 @@
     import { ToggleButton } from 'vue-js-toggle-button';
     Vue.use(ToggleButton);
     export default {
-        props:['home_content'],
+        props:['contact_content'],
         components: {
             ToggleButton
         },
         data(){
             return{
-                noindex: !!this.home_content.meta_noindex
+                noindex: this.contact_content.meta_noindex
             }
         },
         methods: {
             onChangeEventHandler(){
-                axios.post('/homepage/' + this.home_content.id, this.home_content)
+                axios.post('/contact/' + this.contact_content.id, this.contact_content)
                 .then(
-                    this.home_content.meta_noindex = !this.home_content.meta_noindex,
-                    console.log(this.home_content)
+                    this.contact_content.meta_noindex = !this.noindex,
+                    console.log(this.contact_content)
                     )
                 .catch(function (error) {
                     // handle error
@@ -36,7 +36,7 @@
             }
         },
         mounted() {
-            console.log(this.home_content.id)
+            console.log(this.contact_content.id)
         }
     }
 </script>

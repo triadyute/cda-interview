@@ -11,6 +11,6 @@ $factory->define(HomeContent::class, function (Faker $faker) {
         'body' => $faker->paragraph($nbSentences = 130, $variableNbSentences = true),
         'meta_title' => 'CDA Interview',
         'meta_description' => 'Ultimate Guide to CDA Structured Interview: Tips & Proven Strategies to Help You Prepare & Ace Your CDA Interview',
-        'meta_noindex' => 'noindex'
+        'meta_noindex' => false
     ];
 });

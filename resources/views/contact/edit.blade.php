@@ -6,10 +6,10 @@
         @include('inc.messages')
         <section class="card">
             <header class="card-header">
-                <div class="card-actions">
-                    <toggle-no-index-home></toggle-no-index-home>
-                    <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
-                    <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
+                <div class="card-actions" id="app">
+                    <toggle-no-index-contact :contact_content="{{$contact_content}}"></toggle-no-index-contact>
+                    {{-- <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+                    <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a> --}}
                 </div>
 
                 <h2 class="card-title">Edit Contact page Content</h2>

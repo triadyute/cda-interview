@@ -12,7 +12,7 @@ $factory->define(ContactContent::class, function (Faker $faker) {
         'email' => 'info@bemoacademicconsulting.com',
         'cda_email' => 'foo@bar.com',
         'meta_title' => 'CDA Interview',
-        'meta_description' => 'Ultimate Guide to CDA Structured Interview: Tips & Proven Strategies to Help You Prepare & Ace Your CDA Interview',
-        'meta_noindex' => 'noindex'
+        'meta_description' => 'Ultimate Guide to CDA Structured Interview: Tips & Proven Strategies to Help You Prepare & Ace Your CDA Interview'
+        //'meta_noindex' => 'noindex'
     ];
 });
